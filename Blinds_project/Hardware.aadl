@@ -1,0 +1,37 @@
+package Hardware
+public
+	
+	bus USB
+	end USB;
+	
+	bus Wire
+	end Wire;
+	
+	bus SystemBus
+	end SystemBus;
+	
+	
+	processor MicroController 
+		features
+		    pin1: requires bus access Wire;
+		   	pin2: requires bus access Wire;
+		    pin3: requires bus access Wire;
+		    pin4: requires bus access Wire;
+		    pin5: requires bus access Wire;
+		    pin6: requires bus access Wire;
+		    pin7: requires bus access Wire;
+		    usb1: requires bus access USB;
+		    
+		    properties
+			 Scheduling_Protocol => (RMS);
+			 Priority_Range => 1 .. 20;
+			 Clock_Period => 1 ms;
+			 Transmission_Time => [Fixed => 0 ns .. 0 ns; PerByte => 1 us .. 1 us;]; 
+	end MicroController;
+	
+	processor Remote
+		features
+			usb: requires bus access USB;
+	end Remote;
+	
+end Hardware;

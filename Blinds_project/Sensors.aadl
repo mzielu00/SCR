@@ -1,0 +1,130 @@
+package Sensors
+public
+
+	with Base_Types;
+	with CustomTypes;
+	with Hardware;
+
+	device TemperatureSensor
+		features
+			temperature: out data port CustomTypes::TemperatureType;
+			pin: requires bus access Hardware::Wire;
+
+	end TemperatureSensor;
+
+	thread TemperatureProcess
+		features
+			temperature: in data port CustomTypes::TemperatureType;
+			temperatureToHigh: out event port;
+			
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 30ms;
+			Period => 30ms;
+			Compute_Execution_Time => 1ms .. 2ms;
+	end TemperatureProcess;
+
+	thread implementation TemperatureProcess.impl
+	end TemperatureProcess.impl;
+
+--  Light 
+	device LightSensor
+		features
+			brightness: out data port CustomTypes::LightType;
+			pin: requires bus access Hardware::Wire;
+
+	end LightSensor;
+
+	thread LightProcess
+		features
+			brightness: in data port CustomTypes::LightType;
+			brightnessToHigh: out event port;
+			brightnessToLow: out event port;
+
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 30ms;
+			Period => 30ms;
+			Compute_Execution_Time => 1ms .. 2ms;
+	end LightProcess;
+
+	thread implementation LightProcess.impl
+	end LightProcess.impl;
+
+-- Proximity
+	device ProximitySensor
+		features
+			proximity: out data port CustomTypes::ProximityType;
+			pin: requires bus access Hardware::Wire;
+
+	end ProximitySensor;
+
+	thread ProximityProcess
+		features
+			proximity: in data port CustomTypes::ProximityType;
+			proximityToClose: out event port;
+
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 30ms;
+			Period => 30ms;
+			Compute_Execution_Time => 1ms .. 2ms;
+	end ProximityProcess;
+
+	thread implementation ProximityProcess.impl
+	end ProximityProcess.impl;
+
+-- windowIsClosed
+
+	device WindowSensor
+		features
+			window: out data port Base_Types::boolean;
+			pin: requires bus access Hardware::Wire;
+
+	end WindowSensor;
+
+	thread WindowProcess
+		features
+			window: in data port Base_Types::boolean;
+			windowIsClosed: out event port;
+
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 30ms;
+			Period => 30ms;
+			Compute_Execution_Time => 1ms .. 2ms;
+	end WindowProcess;
+
+	thread implementation WindowProcess.impl
+	end WindowProcess.impl;
+
+-- BlindsAreOpen
+
+	device BlindsSensor
+		features
+			blind: out data port Base_Types::boolean;
+			pin: requires bus access Hardware::Wire;
+
+	end BlindsSensor;
+
+	thread BlindsProcess
+		features
+			blind: in data port Base_Types::boolean;
+			blindsAreOpen: out event port;
+
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 30ms;
+			Period => 30ms;
+			Compute_Execution_Time => 1ms .. 2ms;
+	end BlindsProcess;
+
+	thread implementation BlindsProcess.impl
+	end BlindsProcess.impl;
+	
+end Sensors;

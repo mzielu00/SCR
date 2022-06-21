@@ -1,0 +1,103 @@
+package Blinds
+public
+	
+	with Devices;
+	with Driver;
+	with Sensors;
+	with Hardware;
+	with UI;
+	
+   	system sys
+   	end sys;
+   
+    system implementation sys.impl
+    	subcomponents		
+   			driver : process Driver::Driver.impl;
+   			--sensors
+   			temperatureSensor : device Sensors::TemperatureSensor;
+   			lightSensor : device Sensors::LightSensor;
+   			proximitySensor : device Sensors::ProximitySensor;
+   			windowSensor : device Sensors::WindowSensor;
+   			blindSensor : device Sensors::BlindsSensor;
+   			
+   			--devices
+   			engineUp : device Devices::EngineUp;
+   			engineDown : device Devices::EngineDown;
+   			
+   			--userInterface
+   			remote : device UI::Remote;
+    		
+    		--hardware
+    		microController : processor Hardware::MicroController;
+    		
+    		-- bus
+    		busTemperature : bus Hardware::Wire;
+    		busLight : bus Hardware::Wire;
+    		busProximity : bus Hardware::Wire;
+    		busWindow : bus Hardware::Wire;
+    		busBlind : bus Hardware::Wire;
+
+    		busEngineUp : bus Hardware::Wire;
+    		busEngineDown : bus Hardware::Wire;
+
+    		busUSB : bus Hardware::USB;
+    		
+    	connections
+    		--sensors
+    		c_temperature : port temperatureSensor.temperature -> driver.temperature;
+    		c_light : port lightSensor.brightness -> driver.light;
+    		c_proximity: port proximitySensor.proximity -> driver.proximity;
+    		c_window : port windowSensor.window -> driver.windowIsClosed;
+    		c_blind: port blindSensor.blind -> driver.blindsAreOpen;
+    		
+    		--devices
+    		c_engineUp : port driver.engineUp -> engineUp.state;
+    		c_engineDown : port driver.engineDown -> engineDown.state;
+    		--userInterface
+    		c_remote : port remote.pressedKey -> driver.remoteSignal;
+    		
+    		-- bus connections
+    		c_TMC : bus access busTemperature ->temperatureSensor.pin;
+    		c_MCT : bus access busTemperature ->microController.pin1;
+    		
+    		c_LMC : bus access busLight ->lightSensor.pin;
+    		c_MCL : bus access busLight ->microController.pin2;
+    		
+    		c_PMC : bus access busProximity ->proximitySensor.pin;
+    		c_MCP : bus access busProximity ->microController.pin3;
+    		
+    		c_WMC : bus access busWindow ->windowSensor.pin;
+    		c_MCW : bus access busWindow ->microController.pin4;
+    		
+    		c_BMC : bus access busBlind ->proximitySensor.pin;
+    		c_MCB : bus access busBlind ->microController.pin5;
+    		
+    		c_EUMC : bus access busEngineUp -> engineUp.pin;
+    		c_MCEU : bus access busEngineUp -> microController.pin6;
+    		
+    		c_EDMC : bus access busEngineDown -> engineDown.pin;
+    		c_MCED : bus access busEngineDown -> microController.pin7;
+    		
+    		c_KMC : bus access busUSB -> remote.usb;
+    		c_MCK : bus access busUSB -> microController.usb1;
+    		
+    		
+    		
+		properties
+			  Actual_Connection_Binding => (reference(busTemperature)) applies to c_temperature;
+			  Actual_Connection_Binding => (reference(busLight))  applies to c_light;
+			  Actual_Connection_Binding => (reference(busProximity))  applies to c_proximity;
+			  Actual_Connection_Binding => (reference(busWindow))  applies to c_window;
+			  Actual_Connection_Binding => (reference(busBlind))  applies to c_blind;
+			  Actual_Connection_Binding => (reference(busEngineUp))  applies to c_engineUp;
+			  Actual_Connection_Binding => (reference(busEngineDown))  applies to c_engineDown;
+			  Actual_Connection_Binding => (reference(busUSB))  applies to c_remote;
+			  
+			  
+			  Actual_Processor_Binding => (reference(microController)) applies to driver;
+				 
+    		
+    		
+    end sys.impl;
+	
+end Blinds;

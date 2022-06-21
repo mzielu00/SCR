@@ -1,0 +1,81 @@
+package Driver
+public
+
+	with CustomTypes;
+	with Base_Types;
+	with UI;
+	with Sensors;
+
+	process Driver
+		features
+
+			temperature: in data port CustomTypes::TemperatureType;
+			light: in data port CustomTypes::LightType;
+			proximity: in data port CustomTypes::ProximityType;
+			windowIsClosed: in data port Base_Types::boolean;
+			blindsAreOpen: in data port Base_Types::boolean;
+
+			remoteSignal: in data port UI::Key;
+
+			engineUp: out data port Base_Types::boolean;
+			engineDown: out data port Base_Types::boolean;
+
+	end Driver;
+
+	thread DriverMainThread
+		features
+			getUserInput: in data port Base_Types::String;
+			startStopEngineUp: out data port Base_Types::boolean;
+			startStopEngineDown: out data port Base_Types::boolean;
+
+			humidityLevelToLow: in event port;
+			temperatureToHigh: in event port;
+			brightnessToHigh: in event port;
+			brightnessToLow: in event port;
+			proximityToClose: in event port;
+			windowIsClosed: in event port;
+			blindsAreOpen: in event port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Dispatch_Offset => 2ms;
+			Deadline => 5ms;
+			Period => 15ms;
+			Compute_Execution_Time => 0ms .. 5ms;
+	end DriverMainThread;
+
+	process implementation Driver.impl
+		subcomponents
+
+			temperatureProccesor: thread Sensors::TemperatureProcess;
+			proximityProccesor: thread Sensors::ProximityProcess;
+			lightProccesor: thread Sensors::LightProcess;
+			windowProccesor: thread Sensors::WindowProcess;
+			blindProccesor: thread Sensors::BlindsProcess;
+			remoteInput: thread UI::RemoteInputProcces;
+			main: thread DriverMainThread;
+
+		connections
+			c_temperature: port temperature -> temperatureProccesor.temperature;
+			c_light: port light -> lightProccesor.brightness;
+			c_proximity: port proximity -> proximityProccesor.proximity;
+			c_window_is_closed: port windowIsClosed -> windowProccesor.window;
+			c_blinds_are_open: port blindsAreOpen -> blindProccesor.blind;
+
+			c_remote_signal: port remoteSignal -> remoteInput.pessKey;
+
+			--main thread 
+			c_temperature_main: port temperatureProccesor.temperatureToHigh -> main.temperatureToHigh;
+			c_light_main: port lightProccesor.brightnessToHigh -> main.brightnessToHigh;
+			c_light_main_2: port lightProccesor.brightnessToLow -> main.brightnessToLow;
+			c_proximity_main: port proximityProccesor.proximityToClose -> main.proximityToClose;
+			c_window_main: port windowProccesor.windowIsClosed -> main.windowIsClosed;
+			c_blind_main: port blindProccesor.blindsAreOpen -> main.blindsAreOpen;
+
+			c_main_engine_up: port main.startStopEngineUp -> engineUp;
+			c_main_engine_down: port main.startStopEngineDown -> engineDown;
+
+			c_remote_main: port remoteInput.sendData -> main.getUserInput;
+
+	end Driver.impl;
+	
+end Driver;

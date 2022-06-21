@@ -1,0 +1,31 @@
+package UI
+public
+	
+	with Base_Types;
+	with Hardware;
+	
+	data Key
+  	end Key;
+	
+	device Remote
+		features
+			pressedKey : out data port Key;
+			usb: requires bus access Hardware::USB;
+	end Remote;
+
+	thread RemoteInputProcces
+		features
+   			pessKey : in data port Key;
+   			sendData : out data port Base_Types::String;
+   		properties
+   			Dispatch_Protocol => Periodic;
+		    Dispatch_Offset => 	2ms;
+		    Deadline => 50ms;	
+		    Period => 100ms;
+		    Compute_Execution_Time => 5ms..10ms;	
+	end RemoteInputProcces;
+	
+	thread implementation RemoteInputProcces.impl
+	end RemoteInputProcces.impl;
+	
+end UI;

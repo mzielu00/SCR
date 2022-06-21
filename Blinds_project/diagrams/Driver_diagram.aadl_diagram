@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="2078e57f-8ec2-4cde-a328-fed688591cb8" manual="true">
+    <element uuid="af1e0ca8-8224-47f8-b21d-ce031f4e76c9" manual="true">
+      <element uuid="b005b78b-4663-4227-810f-21fba95c5278" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_blind_main</seg>
+      </bo>
+      <bendpoints>
+        <point x="779.859375" y="240.0"/>
+        <point x="779.859375" y="270.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f07d44f9-ba68-4905-aac9-cc1877b2a180" manual="true">
+      <element uuid="64031864-0d52-4691-908c-70f0f1c875d4" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_blinds_are_open</seg>
+      </bo>
+    </element>
+    <element uuid="85fdb7e8-f414-4a70-b4a7-dd57d26c774f" manual="true">
+      <element uuid="c0de34a5-1a1a-4cf8-835d-05c44d0752bb" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_light</seg>
+      </bo>
+    </element>
+    <element uuid="1bc8c127-37d6-4674-88f0-91c65b9c9cb1" manual="true">
+      <element uuid="9d893368-4fde-4450-90b2-6c6c4482568e" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_light_main</seg>
+      </bo>
+    </element>
+    <element uuid="22ca16af-819f-4928-ada0-eac396d85108" manual="true">
+      <element uuid="d7ec6acb-cbc8-493f-89cc-68a411ee77c5" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_light_main_2</seg>
+      </bo>
+    </element>
+    <element uuid="c84be3ac-737c-41ae-9449-cef77d3f8bcc" manual="true">
+      <element uuid="515b9246-a81e-4ed0-86f6-15e277aebc8d" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_main_engine_down</seg>
+      </bo>
+    </element>
+    <element uuid="648cdf73-d8d5-412a-8e82-5bd054cf5791" manual="true">
+      <element uuid="01e8e224-c54f-4ce5-8d57-f32995b953f2" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_main_engine_up</seg>
+      </bo>
+    </element>
+    <element uuid="a62d21a6-e790-40d3-a088-e8ffc540a035" manual="true">
+      <element uuid="d6b656ac-9b50-4217-b0e4-460762289a8a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_proximity</seg>
+      </bo>
+    </element>
+    <element uuid="f2ae8eda-4175-4099-b478-f16aa873fbae" manual="true">
+      <element uuid="48066247-43ab-4f83-86c2-0ec93662a059" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_proximity_main</seg>
+      </bo>
+      <bendpoints>
+        <point x="779.859375" y="450.0"/>
+        <point x="779.859375" y="420.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b59c29b5-9a2d-4d40-9096-31d93abcb260" manual="true">
+      <element uuid="8a986270-5193-4b6e-8694-39b5b7fd70a6" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_remote_main</seg>
+      </bo>
+      <bendpoints>
+        <point x="789.859375" y="80.0"/>
+        <point x="789.859375" y="170.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="3ace4f77-32f7-443c-a10b-fb74a3cb958b" manual="true">
+      <element uuid="f9da72a8-6785-410f-8c96-effb7e0f8b4a" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_remote_signal</seg>
+      </bo>
+    </element>
+    <element uuid="f391ec49-143d-4b64-ae48-058ce7425818" manual="true">
+      <element uuid="b10b6327-45c3-4849-a592-5fbcf94c61df" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_temperature</seg>
+      </bo>
+    </element>
+    <element uuid="01dcadfd-16bc-4e64-9cc6-9ebf43cc8adc" manual="true">
+      <element uuid="becff31a-80a2-4b73-b473-de0bcad71ed4" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_temperature_main</seg>
+      </bo>
+      <bendpoints>
+        <point x="779.859375" y="530.0"/>
+        <point x="779.859375" y="470.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c9d0ce43-4c27-4db2-ad0b-b8e7bb7a4269" manual="true">
+      <element uuid="6a620d20-43a8-40a5-95e1-df254acca0f7" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_window_is_closed</seg>
+      </bo>
+    </element>
+    <element uuid="2bded22f-4f00-4f54-9db0-50d48b99f427" manual="true">
+      <element uuid="3e9f66c9-0de5-401d-81d5-84c02027ef81" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_window_main</seg>
+      </bo>
+      <bendpoints>
+        <point x="779.859375" y="160.0"/>
+        <point x="779.859375" y="220.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="9b7060fd-8ef2-44c4-aa62-4394b14d545f" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>blindsAreOpen</seg>
+      </bo>
+      <position y="208.0"/>
+    </element>
+    <element uuid="60497c33-562c-4158-a552-3664e18192dc" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>engineDown</seg>
+      </bo>
+      <position x="1288.2187576293945" y="238.0"/>
+    </element>
+    <element uuid="ada1d565-df1d-43f2-8def-43a2feac6466" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>engineUp</seg>
+      </bo>
+      <position x="1305.263027191162" y="388.0"/>
+    </element>
+    <element uuid="503463af-1bb7-4504-b41f-95fb62f7fdb5" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>light</seg>
+      </bo>
+      <position y="313.0"/>
+    </element>
+    <element uuid="f84df2a4-112d-4496-83ba-1bf46b8f32ad" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>proximity</seg>
+      </bo>
+      <position y="418.0"/>
+    </element>
+    <element uuid="3ba5e624-3a5a-4994-8d69-dee465743df9" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>remoteSignal</seg>
+      </bo>
+      <position y="48.0"/>
+    </element>
+    <element uuid="9bd061e0-ccc6-40c7-bff1-c7496d7fd043" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>temperature</seg>
+      </bo>
+      <position y="498.0"/>
+    </element>
+    <element uuid="3763d2e8-51e5-4541-8089-814f9b41f7e9" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>windowIsClosed</seg>
+      </bo>
+      <position y="128.0"/>
+    </element>
+    <element uuid="09cde1ef-2221-4e41-a83a-9b81afdf7ba6" manual="true">
+      <element uuid="59ffce02-3105-4840-b1a9-92af7b3c8901" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>blind</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="68279231-821c-40c4-9aa0-b2080f48fa03" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>blindsAreOpen</seg>
+        </bo>
+        <position x="245.58203887939453" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>blindProccesor</seg>
+      </bo>
+      <position x="375.548828125" y="198.0"/>
+      <size width="345.78517150878906" height="60.0"/>
+    </element>
+    <element uuid="39e8871f-29ff-45e4-8e96-d1f1cc06ab42" manual="true">
+      <element uuid="fd1e02f9-8b4e-4404-bf32-29cd9077ace5" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brightness</seg>
+        </bo>
+        <position y="35.0"/>
+      </element>
+      <element uuid="63f477a4-93f4-41c0-bd92-0774c1a68e06" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>brightnessToHigh</seg>
+        </bo>
+        <position x="258.1666717529297" y="60.0"/>
+      </element>
+      <element uuid="0a55841e-8f7b-4e78-9098-1058ba1819ff" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>brightnessToLow</seg>
+        </bo>
+        <position x="261.12891387939453" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>lightProccesor</seg>
+      </bo>
+      <position x="372.4704869588216" y="278.0"/>
+      <size width="374.6653747558594" height="110.0"/>
+    </element>
+    <element uuid="e62397ef-745e-437c-9fca-97003fa63439" manual="true">
+      <element uuid="9f7d5ced-6375-4c8f-b9a3-3045549840a0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>blindsAreOpen</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="689975a0-b8b6-4e74-a80a-28d4557c6bce" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brightnessToHigh</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="b3af77ef-d200-442d-9e8b-dcbf5b262606" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brightnessToLow</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="9300a793-69a2-4d44-b672-e64054399164" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>getUserInput</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="f77da467-4461-44aa-8a13-feb5d13580ae" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>humidityLevelToLow</seg>
+        </bo>
+        <position y="360.0"/>
+      </element>
+      <element uuid="c6ec932f-5e26-49d2-9b52-74dc2a9cdf19" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>proximityToClose</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="9ec2858a-32af-4210-b228-83af73e0ff21" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>startStopEngineDown</seg>
+        </bo>
+        <position x="227.05339813232422" y="110.0"/>
+      </element>
+      <element uuid="81a07089-051c-4632-b8e1-9e55fb096322" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>startStopEngineUp</seg>
+        </bo>
+        <position x="244.09767150878906" y="260.0"/>
+      </element>
+      <element uuid="9a848dc1-6699-4cdf-a0eb-64ae46959c67" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureToHigh</seg>
+        </bo>
+        <position y="310.0"/>
+      </element>
+      <element uuid="6f101512-d9ed-4560-ba9f-bf7efc0437b2" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>windowIsClosed</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>main</seg>
+      </bo>
+      <position x="799.8593978881836" y="128.0"/>
+      <size width="368.0182571411133" height="410.0"/>
+    </element>
+    <element uuid="6babba64-146e-4ab6-b4c8-5b9c475311d0" manual="true">
+      <element uuid="4e2720c8-3e66-4d4e-883b-d6ac27a7bbff" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>proximity</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="90f34723-9f7e-4baf-ad3a-bfa56b854397" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>proximityToClose</seg>
+        </bo>
+        <position x="285.5364532470703" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>proximityProccesor</seg>
+      </bo>
+      <position x="348.1790466308594" y="408.0"/>
+      <size width="400.5247344970703" height="60.0"/>
+    </element>
+    <element uuid="c838c88d-347f-48c4-bfa7-06445ca968e5" manual="true">
+      <element uuid="e379b626-b44b-4400-9d04-49051b39f60a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>pessKey</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="2b1140cc-ff6a-47ac-8bb9-56ba0666d442" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>sendData</seg>
+        </bo>
+        <position x="197.4179573059082" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>remoteInput</seg>
+      </bo>
+      <position x="415.1940269470215" y="38.0"/>
+      <size width="266.4947738647461" height="60.0"/>
+    </element>
+    <element uuid="1403fcaf-306a-4418-a8b0-9e25105bf7d8" manual="true">
+      <element uuid="8138fe50-8489-4f95-8e86-1b3038b772aa" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperature</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="01777887-4e74-4d70-babf-3d628d2d241a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureToHigh</seg>
+        </bo>
+        <position x="315.9661407470703" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>temperatureProccesor</seg>
+      </bo>
+      <position x="327.02344512939453" y="488.0"/>
+      <size width="442.8359375" height="60.0"/>
+    </element>
+    <element uuid="ddb19f6a-1095-43c8-9933-8358bc8d5eaf" manual="true">
+      <element uuid="3991cd16-5990-4c70-91ca-04bd61f888c1" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>window</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="aef9be3e-3e23-458e-9c6c-936e7f5c6be4" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>windowIsClosed</seg>
+        </bo>
+        <position x="270.015625" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>windowProccesor</seg>
+      </bo>
+      <position x="359.2630271911621" y="118.0"/>
+      <size width="378.35677337646484" height="60.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>Driver.impl</seg>
+    </bo>
+    <position/>
+    <size width="1374.3463592529297" height="560.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>Driver::Driver.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

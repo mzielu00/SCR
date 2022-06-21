@@ -1,0 +1,20 @@
+package Devices
+public
+	
+	with Base_Types;
+	with Hardware;
+   	
+   	device EngineUp
+   		features
+			state: in data port Base_Types::boolean;
+			pin: requires bus access Hardware::Wire;
+   	end EngineUp;
+   	
+   	device EngineDown
+   		features
+			state: in data port Base_Types::boolean;
+			pin: requires bus access Hardware::Wire;
+   	end EngineDown;
+	
+	
+end Devices;

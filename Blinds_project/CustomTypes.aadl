@@ -1,0 +1,21 @@
+package CustomTypes
+public
+	with Data_Model;
+
+	data TemperatureType
+		properties
+			Data_Model::Data_Representation => Integer;
+	end TemperatureType;
+
+	data LightType
+		properties
+			Data_Model::Data_Representation => Integer;
+	end LightType;
+	
+	data ProximityType
+		properties
+			Data_Model::Data_Representation => Integer;
+	end ProximityType;
+
+	
+end CustomTypes;
