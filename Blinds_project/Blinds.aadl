@@ -20,11 +20,11 @@ public
    			windowSensor : device Sensors::WindowSensor;
    			blindSensor : device Sensors::BlindsSensor;
    			
-   			--devices
+   			--engines
    			engineUp : device Devices::EngineUp;
    			engineDown : device Devices::EngineDown;
    			
-   			--userInterface
+   			--UI
    			remote : device UI::Remote;
     		
     		--hardware
@@ -50,10 +50,11 @@ public
     		c_window : port windowSensor.window -> driver.windowIsClosed;
     		c_blind: port blindSensor.blind -> driver.blindsAreOpen;
     		
-    		--devices
+    		--engines
     		c_engineUp : port driver.engineUp -> engineUp.state;
     		c_engineDown : port driver.engineDown -> engineDown.state;
-    		--userInterface
+		
+    		--UI
     		c_remote : port remote.pressedKey -> driver.remoteSignal;
     		
     		-- bus connections
